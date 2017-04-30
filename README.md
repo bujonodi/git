@@ -6,8 +6,10 @@ Entorno para desarrollar documentación sobre GIT de forma colaborativa
 
 Artículos que podemos iniciar
 
+- [X] Conceptos
 - [ ] Instalación de GIT en local
 - [ ] Configuración de GIT
 - [ ] Clonar repositorios
 - [ ] Primeros comandos
 - [ ] Comandos avanzados
+- [ ] Tipos de merge
