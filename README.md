@@ -9,4 +9,5 @@ Artículos que podemos iniciar
 - [ ] Instalación de GIT en local
 - [ ] Configuración de GIT
 - [ ] Clonar repositorios
-Prueba kotov52
+- [ ] Primeros comandos
+- [ ] Comandos avanzados
