@@ -44,11 +44,11 @@ Terminología:
 
 Para colaborar debemos **clonar** el repositorio ya creado para disponer de una **copia local**.
 
-### #1 De forma exclusiva ###
+### 1 De forma exclusiva ###
 
 Esquema para poder realizar un cmbio en el que es necesario comunicar al repositorio el elemento que se desea modificar y el sistema se encargará de impedir que otro usuario pueda modificar dicho elemento. Una vez hecha la modificación se comparte al resto de colaboradores.
 
-### #2 De forma colaborativa ###
+### 2 De forma colaborativa ###
 
 Esquema en el que cada usuario modifica la copia local y cuendo el usuario decide compartir los cambios el sistema automáticamente intenta combinar las diversas modificaciones.
 
