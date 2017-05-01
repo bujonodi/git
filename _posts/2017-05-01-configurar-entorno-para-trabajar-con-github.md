@@ -43,7 +43,7 @@ y podrás ver los dos ficheros de las claves.
 
 Accede a tu cuenta de Github y entra en la configuracción (settings)
 
-![Accede a settings]({{ site.baseurl}}{{ site.baseurl}}/img/02-01-seleccionar-settings.png  "accede a settings")
+![Accede a settings]({{ site.baseurl}}/img/02-01-seleccionar-settings.png  "accede a settings")
 
 En el menú de la izquierda, entra en `SSH and GPG keys`
 
