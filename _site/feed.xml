@@ -1,5 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4002/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4002/" rel="alternate" type="text/html" /><updated>2017-04-29T21:04:15+02:00</updated><id>http://localhost:4002/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4002/git/2017/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-04-29T20:42:10+02:00</published><updated>2017-04-29T20:42:10+02:00</updated><id>http://localhost:4002/git/2017/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4002/git/2017/04/29/welcome-to-jekyll.html">&lt;p&gt;Bienvenidos al blog coloborativo sobre GIT.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-01T14:13:19+02:00</updated><id>http://localhost:4000/</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
+</subtitle><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
+
+&lt;p&gt;Comprueba si tienes alguna &lt;strong&gt;clave SSH&lt;/strong&gt; generada:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls -l ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Las claves SSH se guardan en pares (una clave privada y una pública). Las dos deben tener el mismo nombre, solo que la pública debe acabar en &lt;code class=&quot;highlighter-rouge&quot;&gt;.pub&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si al ejecutar el comando anterior compruebas que ya tienes una clave creada, puedes saltarte lo que queda de esta sección y pasar a añadir dicha clave a tu cuenta de Github.&lt;/p&gt;
+
+&lt;p&gt;Si no tienes alguna clave creada puedes crear una ejecutando este comando:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;En este momento te pedirá una serie de datos, que puedes omitir para que tome unos valores por defecto si pulsas &lt;code class=&quot;highlighter-rouge&quot;&gt;enter&lt;/code&gt; en cada pregunta.&lt;/p&gt;
+
+&lt;p&gt;Para comprobar que las claves se han generado correctamente vuele a ejecutar:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls -l ~/.ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;o si has guardado las claves en otro directorio:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls -l /path/directorio/claves
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;y podrás ver los dos ficheros de las claves.&lt;/p&gt;
+
+&lt;h1 id=&quot;02-asignar-las-claves-ssh-a-tu-cuenta-de-github&quot;&gt;02 Asignar las claves SSH a tu cuenta de Github&lt;/h1&gt;
+
+&lt;p&gt;Accede a tu cuenta de Github y entra en la configuracción (settings)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/02-01-seleccionar-settings.png&quot; alt=&quot;Accede a settings&quot; title=&quot;accede a settings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En el menú de la izquierda, entra en &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH and GPG keys&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/02-02-seleccionar-ssh-and-gpg-keys.png&quot; alt=&quot;Accede a SSH and GPG keys&quot; title=&quot;Accede a SSH and GPG keys&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora pulsa sobre &lt;code class=&quot;highlighter-rouge&quot;&gt;New SSH key&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/02-03-click-on-new-ssh-key.png&quot; alt=&quot;Click en New SSH key&quot; title=&quot;Click en New SSH key&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En el formulario que se te ha abierto, escribe un título para la clave, y en el apartado &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; tienes que pegar el contenido del fichero &lt;code class=&quot;highlighter-rouge&quot;&gt;.pub&lt;/code&gt; que generaste en el apartado anterior. Para ello puedes abrir el fichero con cualquier editor de texto y copiar el contenido.&lt;/p&gt;
+
+&lt;p&gt;Pulsa sobre &lt;code class=&quot;highlighter-rouge&quot;&gt;Add SSH key&lt;/code&gt; y ya está todo hecho.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/02-04-copy-and-paste-public-key.png&quot; alt=&quot;Pulsa en add SSH key&quot; title=&quot;Pulsa en add SSH key&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;03-comprobar-que-la-operación-se-ha-realizado-bien&quot;&gt;03 Comprobar que la operación se ha realizado bien&lt;/h1&gt;
+
+&lt;p&gt;Ejecuta el siguiente comando desde la terminal&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -T git@github.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;y como respuesta te debe salir algo similar a ésto:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/02-05-comando-realizado-correctamente.png&quot; alt=&quot;Respuesta comando de comprobacion&quot; title=&quot;Respuesta comando de comprobacion&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">01 Generar claves SSH</summary></entry><entry><title type="html">01 Concepto</title><link href="http://localhost:4000/2017/04/30/definicion.html" rel="alternate" type="text/html" title="01 Concepto" /><published>2017-04-30T16:34:25+02:00</published><updated>2017-04-30T16:34:25+02:00</updated><id>http://localhost:4000/2017/04/30/definicion</id><content type="html" xml:base="http://localhost:4000/2017/04/30/definicion.html">&lt;h1 id=&quot;00-definición&quot;&gt;00 Definición&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; es un software de control de versiones diseñado por &lt;em&gt;Linus Torvalds&lt;/em&gt; , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.&lt;/p&gt;
+
+&lt;p&gt;Se llama &lt;strong&gt;control de versiones&lt;/strong&gt; a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. Una versión, revisión o edición de un producto, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo o modificación.&lt;/p&gt;
+
+&lt;h1 id=&quot;01-características&quot;&gt;01 Características&lt;/h1&gt;
+
+&lt;p&gt;Un sistema de versiones debe proporcionar:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Un mecanismo de almacenamiento&lt;/li&gt;
+  &lt;li&gt;Posibilidad de realizar cambios&lt;/li&gt;
+  &lt;li&gt;Registro histórico&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Terminología:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;repositorio&lt;/strong&gt;: lugar en el que se almacenan los datos actualizados e históricos de cambios, a menudo en un servidor.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;módulo&lt;/strong&gt;: conjunto de directorios y/o archivos dentro del repositorio que pertenecen a un proyecto común.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;version&lt;/strong&gt;: revisión determinada de la información que se gestiona.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;tag&lt;/strong&gt;: etiqueta con el fin de clasificar el contenido para encontrarlo más rápidamente.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;baseline&lt;/strong&gt;: línea base, revisión aprobada de un documento o fichero fuente, a partir del cual se pueden realizar los cambios siguientes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;branch&lt;/strong&gt;: rama o bifurcación en un instante de tiempo determinado la cual se desarrolla de forma independiente.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;merge&lt;/strong&gt;: mezcla de ramas de código desarrollado con diferencias.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;checkout&lt;/strong&gt;: despliegue, suele utilizarse para crear ramas nuevas.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;conflicto&lt;/strong&gt;: ocurre cuando hay diferencias entre los archivos y el sistema no está programado para decidir qué parte del código debe dar por bueno.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;resolver&lt;/strong&gt;: intervención manual para solucionar un conflicto.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;changuelist&lt;/strong&gt;: lista de cambios&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;export&lt;/strong&gt;: similar a &lt;em&gt;checkout&lt;/em&gt;. Crea un árbo de directorios limplio sni metadatos de control de versiones presentes en la copia de trabajo, que se encuentran en el directorio &lt;code class=&quot;highlighter-rouge&quot;&gt;.git&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;import&lt;/strong&gt;: acción de copia de un árbol de directorios local en el repositorio por primera vez.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;integración&lt;/strong&gt;: puede ser por &lt;em&gt;fusión&lt;/em&gt; o &lt;em&gt;merge&lt;/em&gt; o por &lt;em&gt;integración inversa&lt;/em&gt; para fundir ramas diferentes en el tronco o &lt;em&gt;trunk&lt;/em&gt; principal.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sync&lt;/strong&gt;: actualización.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;workspace&lt;/strong&gt;: copia local de los ficheros de un repositorio. Conceptualmente es un &lt;em&gt;cajón de arena&lt;/em&gt; o &lt;code class=&quot;highlighter-rouge&quot;&gt;sandbox&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;congelar&lt;/strong&gt;: permitir los últimos commits para resolver buggs y suspender cualquier otro antes de la entrega.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;02-formas-de-colaborar&quot;&gt;02 Formas de colaborar&lt;/h1&gt;
+
+&lt;p&gt;Para colaborar debemos &lt;strong&gt;clonar&lt;/strong&gt; el repositorio ya creado para disponer de una &lt;strong&gt;copia local&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-de-forma-exclusiva&quot;&gt;1 De forma exclusiva&lt;/h3&gt;
+
+&lt;p&gt;Esquema para poder realizar un cmbio en el que es necesario comunicar al repositorio el elemento que se desea modificar y el sistema se encargará de impedir que otro usuario pueda modificar dicho elemento. Una vez hecha la modificación se comparte al resto de colaboradores.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-de-forma-colaborativa&quot;&gt;2 De forma colaborativa&lt;/h3&gt;
+
+&lt;p&gt;Esquema en el que cada usuario modifica la copia local y cuendo el usuario decide compartir los cambios el sistema automáticamente intenta combinar las diversas modificaciones.&lt;/p&gt;
+
+&lt;p&gt;Suelen aparecer conflictos e inconsistencias que se deben solucionar de forma manual.&lt;/p&gt;
+
+&lt;h1 id=&quot;03-arquitecturas-de-almacenamiento&quot;&gt;03 Arquitecturas de almacenamiento&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distribuidos&lt;/strong&gt;: cada usuario tiene su propio repositorio. Los repositorios puede intercambiar y mezclar revisiones. Es frecuente el uso de un repositorio en un servidor contra el que se sincronizan las copias locales.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Centralizados&lt;/strong&gt;: existe un repositorio centralizado de todo el código, del cual es responsable un único usuario (o conjunto de ellos) Se facilitan las tareas administrativas a cambio de reducir flexibilidad, pues todas las decisiones fuertes, como crear una nueva rama, necesitan la aprobación del responsable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;04-tipos-de-ramas&quot;&gt;04 Tipos de ramas&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Master&lt;/strong&gt;: rama principal. Contiene el repositorio principal en producción, por lo que debe estar estable.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Development&lt;/strong&gt;: rama sacada de master. Es la rama de integración, todas las nuevas funcionalidades se deben integrar en esta rama. Cuando se realicen las integraciones y se corrijan los errores se mezclará con la rama &lt;em&gt;master&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Features&lt;/strong&gt;: cada nueva funcionalidad se debe realizar en una rama nueva, especificada para esa funcionalidad. Se deben sacar de la rama &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hotfix&lt;/strong&gt;: los bugs que surgen en producción, por lo general se deben arreglar y publicar de forma urgente. Se sacan de la rama &lt;em&gt;master&lt;/em&gt;. Una vez corregido el error se mezcal sobre la rama &lt;em&gt;master&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">00 Definición</summary></entry><entry><title type="html">00 Bienvenidos</title><link href="http://localhost:4000/git/2017/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="00 Bienvenidos" /><published>2017-04-29T20:42:10+02:00</published><updated>2017-04-29T20:42:10+02:00</updated><id>http://localhost:4000/git/2017/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/git/2017/04/29/welcome-to-jekyll.html">&lt;p&gt;Bienvenidos al blog coloborativo sobre GIT.&lt;/p&gt;
 
 &lt;p&gt;En este espacio podemo recopilar el aprendizaje colaborativo sobre esta plataforma.&lt;/p&gt;
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 01 Concepto
-date: dg 30 abr 2017 16:34:25 CEST 
+date: 2017-04-30 16:34:25 +0200
 ---
 
 
@@ -67,4 +67,3 @@ Suelen aparecer conflictos e inconsistencias que se deben solucionar de forma ma
 - **Development**: rama sacada de master. Es la rama de integración, todas las nuevas funcionalidades se deben integrar en esta rama. Cuando se realicen las integraciones y se corrijan los errores se mezclará con la rama *master*.
 - **Features**: cada nueva funcionalidad se debe realizar en una rama nueva, especificada para esa funcionalidad. Se deben sacar de la rama `development`.
 - **Hotfix**: los bugs que surgen en producción, por lo general se deben arreglar y publicar de forma urgente. Se sacan de la rama *master*. Una vez corregido el error se mezcal sobre la rama *master*.
-
