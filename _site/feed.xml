@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-01T14:13:19+02:00</updated><id>http://localhost:4000/</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
-</subtitle><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-01T16:10:38+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
+</subtitle><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
 
 &lt;p&gt;Comprueba si tienes alguna &lt;strong&gt;clave SSH&lt;/strong&gt; generada:&lt;/p&gt;
 
@@ -37,21 +37,21 @@
 
 &lt;p&gt;Accede a tu cuenta de Github y entra en la configuracción (settings)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/02-01-seleccionar-settings.png&quot; alt=&quot;Accede a settings&quot; title=&quot;accede a settings&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//git//img/02-01-seleccionar-settings.png&quot; alt=&quot;Accede a settings&quot; title=&quot;accede a settings&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En el menú de la izquierda, entra en &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH and GPG keys&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/02-02-seleccionar-ssh-and-gpg-keys.png&quot; alt=&quot;Accede a SSH and GPG keys&quot; title=&quot;Accede a SSH and GPG keys&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-02-seleccionar-ssh-and-gpg-keys.png&quot; alt=&quot;Accede a SSH and GPG keys&quot; title=&quot;Accede a SSH and GPG keys&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora pulsa sobre &lt;code class=&quot;highlighter-rouge&quot;&gt;New SSH key&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/02-03-click-on-new-ssh-key.png&quot; alt=&quot;Click en New SSH key&quot; title=&quot;Click en New SSH key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-03-click-on-new-ssh-key.png&quot; alt=&quot;Click en New SSH key&quot; title=&quot;Click en New SSH key&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En el formulario que se te ha abierto, escribe un título para la clave, y en el apartado &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; tienes que pegar el contenido del fichero &lt;code class=&quot;highlighter-rouge&quot;&gt;.pub&lt;/code&gt; que generaste en el apartado anterior. Para ello puedes abrir el fichero con cualquier editor de texto y copiar el contenido.&lt;/p&gt;
 
 &lt;p&gt;Pulsa sobre &lt;code class=&quot;highlighter-rouge&quot;&gt;Add SSH key&lt;/code&gt; y ya está todo hecho.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/02-04-copy-and-paste-public-key.png&quot; alt=&quot;Pulsa en add SSH key&quot; title=&quot;Pulsa en add SSH key&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-04-copy-and-paste-public-key.png&quot; alt=&quot;Pulsa en add SSH key&quot; title=&quot;Pulsa en add SSH key&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;03-comprobar-que-la-operación-se-ha-realizado-bien&quot;&gt;03 Comprobar que la operación se ha realizado bien&lt;/h1&gt;
 
@@ -63,7 +63,7 @@
 
 &lt;p&gt;y como respuesta te debe salir algo similar a ésto:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/02-05-comando-realizado-correctamente.png&quot; alt=&quot;Respuesta comando de comprobacion&quot; title=&quot;Respuesta comando de comprobacion&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">01 Generar claves SSH</summary></entry><entry><title type="html">01 Concepto</title><link href="http://localhost:4000/2017/04/30/definicion.html" rel="alternate" type="text/html" title="01 Concepto" /><published>2017-04-30T16:34:25+02:00</published><updated>2017-04-30T16:34:25+02:00</updated><id>http://localhost:4000/2017/04/30/definicion</id><content type="html" xml:base="http://localhost:4000/2017/04/30/definicion.html">&lt;h1 id=&quot;00-definición&quot;&gt;00 Definición&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-05-comando-realizado-correctamente.png&quot; alt=&quot;Respuesta comando de comprobacion&quot; title=&quot;Respuesta comando de comprobacion&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">01 Generar claves SSH</summary></entry><entry><title type="html">01 Concepto</title><link href="http://localhost:4000/git//2017/04/30/definicion.html" rel="alternate" type="text/html" title="01 Concepto" /><published>2017-04-30T16:34:25+02:00</published><updated>2017-04-30T16:34:25+02:00</updated><id>http://localhost:4000/git//2017/04/30/definicion</id><content type="html" xml:base="http://localhost:4000/git//2017/04/30/definicion.html">&lt;h1 id=&quot;00-definición&quot;&gt;00 Definición&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; es un software de control de versiones diseñado por &lt;em&gt;Linus Torvalds&lt;/em&gt; , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.&lt;/p&gt;
 
@@ -129,7 +129,7 @@
   &lt;li&gt;&lt;strong&gt;Development&lt;/strong&gt;: rama sacada de master. Es la rama de integración, todas las nuevas funcionalidades se deben integrar en esta rama. Cuando se realicen las integraciones y se corrijan los errores se mezclará con la rama &lt;em&gt;master&lt;/em&gt;.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Features&lt;/strong&gt;: cada nueva funcionalidad se debe realizar en una rama nueva, especificada para esa funcionalidad. Se deben sacar de la rama &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Hotfix&lt;/strong&gt;: los bugs que surgen en producción, por lo general se deben arreglar y publicar de forma urgente. Se sacan de la rama &lt;em&gt;master&lt;/em&gt;. Una vez corregido el error se mezcal sobre la rama &lt;em&gt;master&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">00 Definición</summary></entry><entry><title type="html">00 Bienvenidos</title><link href="http://localhost:4000/git/2017/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="00 Bienvenidos" /><published>2017-04-29T20:42:10+02:00</published><updated>2017-04-29T20:42:10+02:00</updated><id>http://localhost:4000/git/2017/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/git/2017/04/29/welcome-to-jekyll.html">&lt;p&gt;Bienvenidos al blog coloborativo sobre GIT.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">00 Definición</summary></entry><entry><title type="html">00 Bienvenidos</title><link href="http://localhost:4000/git//git/2017/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="00 Bienvenidos" /><published>2017-04-29T20:42:10+02:00</published><updated>2017-04-29T20:42:10+02:00</updated><id>http://localhost:4000/git//git/2017/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/git//git/2017/04/29/welcome-to-jekyll.html">&lt;p&gt;Bienvenidos al blog coloborativo sobre GIT.&lt;/p&gt;
 
 &lt;p&gt;En este espacio podemo recopilar el aprendizaje colaborativo sobre esta plataforma.&lt;/p&gt;
 

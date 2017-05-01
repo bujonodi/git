@@ -43,21 +43,21 @@ y podrás ver los dos ficheros de las claves.
 
 Accede a tu cuenta de Github y entra en la configuracción (settings)
 
-![Accede a settings](/img/02-01-seleccionar-settings.png  "accede a settings")
+![Accede a settings]({{ site.baseurl}}{{ site.baseurl}}/img/02-01-seleccionar-settings.png  "accede a settings")
 
 En el menú de la izquierda, entra en `SSH and GPG keys`
 
-![Accede a SSH and GPG keys](/img/02-02-seleccionar-ssh-and-gpg-keys.png  "Accede a SSH and GPG keys")
+![Accede a SSH and GPG keys]({{ site.baseurl}}/img/02-02-seleccionar-ssh-and-gpg-keys.png  "Accede a SSH and GPG keys")
 
 Ahora pulsa sobre `New SSH key`
 
-![Click en New SSH key](/img/02-03-click-on-new-ssh-key.png  "Click en New SSH key")
+![Click en New SSH key]({{ site.baseurl}}/img/02-03-click-on-new-ssh-key.png  "Click en New SSH key")
 
 En el formulario que se te ha abierto, escribe un título para la clave, y en el apartado `key` tienes que pegar el contenido del fichero `.pub` que generaste en el apartado anterior. Para ello puedes abrir el fichero con cualquier editor de texto y copiar el contenido.
 
 Pulsa sobre `Add SSH key` y ya está todo hecho.
 
-![Pulsa en add SSH key](/img/02-04-copy-and-paste-public-key.png  "Pulsa en add SSH key")
+![Pulsa en add SSH key]({{ site.baseurl}}/img/02-04-copy-and-paste-public-key.png  "Pulsa en add SSH key")
 
 
 # 03 Comprobar que la operación se ha realizado bien #
@@ -70,4 +70,4 @@ ssh -T git@github.com
 
 y como respuesta te debe salir algo similar a ésto:
 
-![Respuesta comando de comprobacion](/img/02-05-comando-realizado-correctamente.png  "Respuesta comando de comprobacion")
+![Respuesta comando de comprobacion]({{ site.baseurl}}/img/02-05-comando-realizado-correctamente.png  "Respuesta comando de comprobacion")
