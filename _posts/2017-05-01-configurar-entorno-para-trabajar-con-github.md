@@ -71,3 +71,27 @@ ssh -T git@github.com
 y como respuesta te debe salir algo similar a ésto:
 
 ![Respuesta comando de comprobacion]({{ site.baseurl}}/img/02-05-comando-realizado-correctamente.png  "Respuesta comando de comprobacion")
+
+# 04 Configurar nombre y correo
+
+```
+$ git config --global user.name "John Doe"
+
+$ git config --global user.email johndoe@example.com
+```
+# 05 Guardar contraseña en local
+
+Para que no nos pida contraseña cada vez que enviamos cambios a GitHub:
+
+```
+$ git config --global credential.helper store
+```
+
+La contraseña del repositorio remoto queda almacenada en el fichero `.git-credentials`
+
+Si no queremos que quede guardada:
+
+```
+$ git config --global credential.helper 'cache --timeout=3600'
+```
+Cuando transcurra una hora nos volverá a pedir la contraseña.
