@@ -7,9 +7,11 @@ date: 2017-04-30 16:34:25 +0200
 
 # 00 Definición #
 
-**Git** es un software de control de versiones diseñado por *Linus Torvalds* , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.
 
 Se llama **control de versiones** a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. Una versión, revisión o edición de un producto, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo o modificación.
+
+**Git** es un software de control de versiones diseñado por *Linus Torvalds* , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.
+
 
 # 01 Características #
 

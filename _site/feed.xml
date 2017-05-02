@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-01T16:10:38+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-01T17:29:45+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
 </subtitle><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
 
 &lt;p&gt;Comprueba si tienes alguna &lt;strong&gt;clave SSH&lt;/strong&gt; generada:&lt;/p&gt;
@@ -37,7 +37,7 @@
 
 &lt;p&gt;Accede a tu cuenta de Github y entra en la configuracción (settings)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/git//git//img/02-01-seleccionar-settings.png&quot; alt=&quot;Accede a settings&quot; title=&quot;accede a settings&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-01-seleccionar-settings.png&quot; alt=&quot;Accede a settings&quot; title=&quot;accede a settings&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En el menú de la izquierda, entra en &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH and GPG keys&lt;/code&gt;&lt;/p&gt;
 
