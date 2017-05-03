@@ -21,7 +21,7 @@ Principalmente tendremos dos formas de realizar fusionar ramas.
  Tenemos dos ramas, por ejemplo rama _master_ y _desarrollo_, queremos fusionar la rama desarrollo sobre la rama _master_
 
 
-![]({{ site.baseurl}}/img/20170502-165541.png) 
+![](/img/20170502-165541.png) 
 
 
 Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_master_, y realizamos el _merge_.

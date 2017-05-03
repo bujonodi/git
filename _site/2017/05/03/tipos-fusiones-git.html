@@ -1,6 +1,8 @@
-<h1 id="fusiones--en-git-merge-y-rebase">Fusiones  en Git: Merge y Rebase</h1>
 
-<p><strong>Introducción</strong></p>
+<h1 id="fusiones--en-git-merge-y-rebase">Fusiones  en Git: Merge y Rebase</h1>
+<hr />
+
+<h2 id="01-introducción">01 Introducción</h2>
 
 <p>Cuando un usuario utiliza Git, tarde o temprano, debera utilizar ramas, que son un conjunto de commit en una línea de tiempo.</p>
 
@@ -12,11 +14,11 @@
 
 <p>Principalmente tendremos dos formas de realizar fusionar ramas.</p>
 
-<p><strong>Merge</strong></p>
+<h2 id="02-merge">02 Merge</h2>
 
 <p>Tenemos dos ramas, por ejemplo rama <em>master</em> y <em>desarrollo</em>, queremos fusionar la rama desarrollo sobre la rama <em>master</em></p>
 
-<p><img src="../imgs/20170502-165541.png" alt="" /></p>
+<p><img src="/git//img/20170502-165541.png" alt="" /></p>
 
 <p>Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_master_, y realizamos el <em>merge</em>.</p>
 
@@ -27,17 +29,17 @@
 
 <p>Esta fusión realiza una “mezcla” , genera un nuevo <em>commit</em> con el contenido de la rama <em>desarrollo</em> en la rama <em>master</em>.</p>
 
-<p><img src="/home/pepe/Descargas/Blog/AprendiendoGit/imgs/merge2.jpg" alt="" /></p>
+<p><img src="/git//img/merge2.jpg" alt="" /></p>
 
 <p>Ahora podemos borrar las rama <em>desarrollo</em> o seguir utilizandola para seguir desarrollando código.</p>
 
-<p><strong>Rebase</strong></p>
+<h2 id="03-rebase">03 Rebase</h2>
 
 <p>Es el otro tipo de fusión con un funcionamiento diferente, aunque tiene el mismo resultado. Este tipo de fusión lo que realiza es reorganización de los commits.</p>
 
 <p>Por ejemploi, tenemos las dos ramas del ejemplo anterior, <em>master</em> y <em>desarrollo</em>.</p>
 
-<p><img src="imgs/20170503-012232.png" alt="" /></p>
+<p><img src="/git//img/20170503-012232.png" alt="" /></p>
 
 <p>Realizamos el  mismo proceso anterior, fusionar  la rama <em>desarrollo</em> en la rama <em>master</em>.</p>
 
@@ -50,7 +52,7 @@ git rebase master
 
 <p>Este comando mueve todos los commit de la rama <em>desarrollo</em> a continuación de la rama <em>master</em>, el resultado sería.</p>
 
-<p><img src="imgs/20170503-012728.png" alt="" /></p>
+<p><img src="/git//img/20170503-012728.png" alt="" /></p>
 
 <p>El resultado es  un historial de commit mas limpio.</p>
 
@@ -58,7 +60,7 @@ git rebase master
 
 <p>Cuando realizas un <em>push</em> descargas commits a tu repositorio local, si realizas un <em>rebase</em>, modificas los id de los commit, si realizas un <em>pull</em> estos commits, con sus identificadores cambiados, se subiran al repositorio público. Si  otro desarrollador realiza un <em>pull</em>, obtendra un conjunto de commit con los id cambiado, que se integraran en su repositorio local y provocara muchos dolores de cabeza.</p>
 
-<p><strong>Rebase interactivo</strong></p>
+<h2 id="04-rebase-interactivo">04 Rebase interactivo</h2>
 
 <p>Es una opción de <em>Rebase</em> y permite realizar la reorganización de una forma manual. Continuando con el ejemplo anterior, si ejecutamos.</p>
 
@@ -68,7 +70,7 @@ git rebase master
 
 <p>Se nos abrira el editor que tenga configurado Git, por defecto vi, mostrando todos los commit de la rama desarrollo.</p>
 
-<p><img src="imgs/20170503-161445.png" alt="" /></p>
+<p><img src="/git//img/20170503-161445.png" alt="" /></p>
 
 <p>En la parte superior veremos los <em>commit</em> con sus identificadores, y una opción que indica la acción que vamos a realizar sobre ese <em>commit</em>.</p>
 
@@ -91,7 +93,7 @@ git rebase master
 
 <p>Selecciona los útimos 3 commits de la rama <em>master</em> para reorganizar.</p>
 
-<p><strong>Conclusión</strong></p>
+<h2 id="05-conclusión">05 Conclusión</h2>
 
 <p>Normalmente se usa <em>merge</em> para fusionar dos ramas, pero el comando <em>rebase</em> debido a su limitación de no usarse en repositorios públicos, no es tan común, aunque tiene su utilidad para dejar un historial mas limpio.</p>
 

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-03T23:19:01+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-03T23:41:58+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
 </subtitle><entry><title type="html">Tipos Fusiones Git</title><link href="http://localhost:4000/git//2017/05/03/tipos-fusiones-git.html" rel="alternate" type="text/html" title="Tipos Fusiones Git" /><published>2017-05-03T00:00:00+02:00</published><updated>2017-05-03T00:00:00+02:00</updated><id>http://localhost:4000/git//2017/05/03/tipos-fusiones-git</id><content type="html" xml:base="http://localhost:4000/git//2017/05/03/tipos-fusiones-git.html">&lt;h1 id=&quot;fusiones--en-git-merge-y-rebase&quot;&gt;Fusiones  en Git: Merge y Rebase&lt;/h1&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Introducción&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;01-introducción&quot;&gt;01 Introducción&lt;/h2&gt;
 
 &lt;p&gt;Cuando un usuario utiliza Git, tarde o temprano, debera utilizar ramas, que son un conjunto de commit en una línea de tiempo.&lt;/p&gt;
 
@@ -13,11 +14,11 @@
 
 &lt;p&gt;Principalmente tendremos dos formas de realizar fusionar ramas.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Merge&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;02-merge&quot;&gt;02 Merge&lt;/h2&gt;
 
 &lt;p&gt;Tenemos dos ramas, por ejemplo rama &lt;em&gt;master&lt;/em&gt; y &lt;em&gt;desarrollo&lt;/em&gt;, queremos fusionar la rama desarrollo sobre la rama &lt;em&gt;master&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../imgs/20170502-165541.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/20170502-165541.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_master_, y realizamos el &lt;em&gt;merge&lt;/em&gt;.&lt;/p&gt;
 
@@ -28,17 +29,17 @@
 
 &lt;p&gt;Esta fusión realiza una “mezcla” , genera un nuevo &lt;em&gt;commit&lt;/em&gt; con el contenido de la rama &lt;em&gt;desarrollo&lt;/em&gt; en la rama &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/home/pepe/Descargas/Blog/AprendiendoGit/imgs/merge2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/merge2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora podemos borrar las rama &lt;em&gt;desarrollo&lt;/em&gt; o seguir utilizandola para seguir desarrollando código.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Rebase&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;03-rebase&quot;&gt;03 Rebase&lt;/h2&gt;
 
 &lt;p&gt;Es el otro tipo de fusión con un funcionamiento diferente, aunque tiene el mismo resultado. Este tipo de fusión lo que realiza es reorganización de los commits.&lt;/p&gt;
 
 &lt;p&gt;Por ejemploi, tenemos las dos ramas del ejemplo anterior, &lt;em&gt;master&lt;/em&gt; y &lt;em&gt;desarrollo&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;imgs/20170503-012232.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/20170503-012232.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Realizamos el  mismo proceso anterior, fusionar  la rama &lt;em&gt;desarrollo&lt;/em&gt; en la rama &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
 
@@ -51,7 +52,7 @@ git rebase master
 
 &lt;p&gt;Este comando mueve todos los commit de la rama &lt;em&gt;desarrollo&lt;/em&gt; a continuación de la rama &lt;em&gt;master&lt;/em&gt;, el resultado sería.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;imgs/20170503-012728.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/20170503-012728.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;El resultado es  un historial de commit mas limpio.&lt;/p&gt;
 
@@ -59,7 +60,7 @@ git rebase master
 
 &lt;p&gt;Cuando realizas un &lt;em&gt;push&lt;/em&gt; descargas commits a tu repositorio local, si realizas un &lt;em&gt;rebase&lt;/em&gt;, modificas los id de los commit, si realizas un &lt;em&gt;pull&lt;/em&gt; estos commits, con sus identificadores cambiados, se subiran al repositorio público. Si  otro desarrollador realiza un &lt;em&gt;pull&lt;/em&gt;, obtendra un conjunto de commit con los id cambiado, que se integraran en su repositorio local y provocara muchos dolores de cabeza.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Rebase interactivo&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;04-rebase-interactivo&quot;&gt;04 Rebase interactivo&lt;/h2&gt;
 
 &lt;p&gt;Es una opción de &lt;em&gt;Rebase&lt;/em&gt; y permite realizar la reorganización de una forma manual. Continuando con el ejemplo anterior, si ejecutamos.&lt;/p&gt;
 
@@ -69,7 +70,7 @@ git rebase master
 
 &lt;p&gt;Se nos abrira el editor que tenga configurado Git, por defecto vi, mostrando todos los commit de la rama desarrollo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;imgs/20170503-161445.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/20170503-161445.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En la parte superior veremos los &lt;em&gt;commit&lt;/em&gt; con sus identificadores, y una opción que indica la acción que vamos a realizar sobre ese &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
 
@@ -92,11 +93,11 @@ git rebase master
 
 &lt;p&gt;Selecciona los útimos 3 commits de la rama &lt;em&gt;master&lt;/em&gt; para reorganizar.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Conclusión&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;05-conclusión&quot;&gt;05 Conclusión&lt;/h2&gt;
 
 &lt;p&gt;Normalmente se usa &lt;em&gt;merge&lt;/em&gt; para fusionar dos ramas, pero el comando &lt;em&gt;rebase&lt;/em&gt; debido a su limitación de no usarse en repositorios públicos, no es tan común, aunque tiene su utilidad para dejar un historial mas limpio.&lt;/p&gt;
 
-&lt;p&gt;El comando &lt;em&gt;rebase&lt;/em&gt; interactivo es muy útil para limpiar aquellos &lt;em&gt;commit&lt;/em&gt; que no aportan valor al historial, se pueden unir con otros, modificar su mensaje. Es un comando muy útil para que el historial de una rama sera mas comprensible.&lt;/p&gt;</content><author><name></name></author><summary type="html">Fusiones en Git: Merge y Rebase</summary></entry><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
+&lt;p&gt;El comando &lt;em&gt;rebase&lt;/em&gt; interactivo es muy útil para limpiar aquellos &lt;em&gt;commit&lt;/em&gt; que no aportan valor al historial, se pueden unir con otros, modificar su mensaje. Es un comando muy útil para que el historial de una rama sera mas comprensible.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
 
 &lt;p&gt;Comprueba si tienes alguna &lt;strong&gt;clave SSH&lt;/strong&gt; generada:&lt;/p&gt;
 
