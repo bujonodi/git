@@ -21,7 +21,7 @@ Principalmente tendremos dos formas de realizar fusionar ramas.
  Tenemos dos ramas, por ejemplo rama _master_ y _desarrollo_, queremos fusionar la rama desarrollo sobre la rama _master_
 
 
-![](/home/pepe/Descargas/Blog/AprendiendoGit/RepoGit/img/20170502-165541.png) 
+![]({{ site.baseurl}}/img/20170502-165541.png) 
 
 
 Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_master_, y realizamos el _merge_.
@@ -32,7 +32,7 @@ Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_m
 
 Esta fusión realiza una "mezcla" , genera un nuevo _commit_ con el contenido de la rama _desarrollo_ en la rama _master_.
 
-![](/home/pepe/Descargas/Blog/AprendiendoGit/imgs/merge2.jpg) 
+![]({{ site.baseurl}}/img/merge2.jpg) 
 
 Ahora podemos borrar las rama _desarrollo_ o seguir utilizandola para seguir desarrollando código.
 
@@ -43,7 +43,7 @@ Es el otro tipo de fusión con un funcionamiento diferente, aunque tiene el mism
 
 Por ejemploi, tenemos las dos ramas del ejemplo anterior, _master_ y _desarrollo_.
 
-![](imgs/20170503-012232.png)
+![]({{ site.baseurl}}/img/20170503-012232.png)
 
 Realizamos el  mismo proceso anterior, fusionar  la rama _desarrollo_ en la rama _master_.
 
@@ -54,7 +54,7 @@ Cuando ejecutamos un _rebase_, nos debemos situar en la rama que vamos a fusiona
 	
 Este comando mueve todos los commit de la rama _desarrollo_ a continuación de la rama _master_, el resultado sería.
 
-![](imgs/20170503-012728.png)
+![]({{ site.baseurl}}/img/20170503-012728.png)
 
 El resultado es  un historial de commit mas limpio.
 
@@ -70,7 +70,7 @@ Es una opción de _Rebase_ y permite realizar la reorganización de una forma ma
 
 Se nos abrira el editor que tenga configurado Git, por defecto vi, mostrando todos los commit de la rama desarrollo.
 
-![](imgs/20170503-161445.png)
+![]({{ site.baseurl}}/img/20170503-161445.png)
 
 En la parte superior veremos los _commit_ con sus identificadores, y una opción que indica la acción que vamos a realizar sobre ese _commit_.
 
