@@ -1,6 +1,9 @@
-# Fusiones  en Git: Merge y Rebase
 
-**Introducción**
+
+#Fusiones  en Git: Merge y Rebase#
+---
+
+## 01 Introducción
 
 Cuando un usuario utiliza Git, tarde o temprano, debera utilizar ramas, que son un conjunto de commit en una línea de tiempo.
 
@@ -13,7 +16,7 @@ Existen varios formas de hacer de fusionar dos ramas, el resultado será el mism
 Principalmente tendremos dos formas de realizar fusionar ramas.
 
 
-**Merge**
+## 02 Merge
 
  Tenemos dos ramas, por ejemplo rama _master_ y _desarrollo_, queremos fusionar la rama desarrollo sobre la rama _master_
 
@@ -34,7 +37,7 @@ Esta fusión realiza una "mezcla" , genera un nuevo _commit_ con el contenido de
 Ahora podemos borrar las rama _desarrollo_ o seguir utilizandola para seguir desarrollando código.
 
 
-**Rebase**
+## 03 Rebase
 
 Es el otro tipo de fusión con un funcionamiento diferente, aunque tiene el mismo resultado. Este tipo de fusión lo que realiza es reorganización de los commits. 
 
@@ -59,7 +62,7 @@ En el proceso de reorganización, a los commits se le ha asignado un nuevo ident
 
 Cuando realizas un _push_ descargas commits a tu repositorio local, si realizas un _rebase_, modificas los id de los commit, si realizas un _pull_ estos commits, con sus identificadores cambiados, se subiran al repositorio público. Si  otro desarrollador realiza un _pull_, obtendra un conjunto de commit con los id cambiado, que se integraran en su repositorio local y provocara muchos dolores de cabeza.
 
-**Rebase interactivo**
+## 04 Rebase interactivo
 
 Es una opción de _Rebase_ y permite realizar la reorganización de una forma manual. Continuando con el ejemplo anterior, si ejecutamos.
 
@@ -87,7 +90,7 @@ También podemos escoger un conjunto de commit, no toda la rama, para reorganiza
 Selecciona los útimos 3 commits de la rama _master_ para reorganizar.
 
 
-**Conclusión**
+## 05 Conclusión
 
 Normalmente se usa _merge_ para fusionar dos ramas, pero el comando _rebase_ debido a su limitación de no usarse en repositorios públicos, no es tan común, aunque tiene su utilidad para dejar un historial mas limpio.
 
