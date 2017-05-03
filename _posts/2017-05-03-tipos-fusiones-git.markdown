@@ -1,6 +1,6 @@
 
 
-#Fusiones  en Git: Merge y Rebase#
+#Fusiones  en Git: Merge y Rebase
 ---
 
 ## 01 Introducción
