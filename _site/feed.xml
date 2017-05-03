@@ -1,5 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-01T17:29:45+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
-</subtitle><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/git//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/git//" rel="alternate" type="text/html" /><updated>2017-05-03T23:19:01+02:00</updated><id>http://localhost:4000/git//</id><title type="html">Aprendiendo GIT</title><subtitle>Espacio colaborativo para dejar constancia de lo que vamos aprendiendo de forma colaborativa sobre este software.
+</subtitle><entry><title type="html">Tipos Fusiones Git</title><link href="http://localhost:4000/git//2017/05/03/tipos-fusiones-git.html" rel="alternate" type="text/html" title="Tipos Fusiones Git" /><published>2017-05-03T00:00:00+02:00</published><updated>2017-05-03T00:00:00+02:00</updated><id>http://localhost:4000/git//2017/05/03/tipos-fusiones-git</id><content type="html" xml:base="http://localhost:4000/git//2017/05/03/tipos-fusiones-git.html">&lt;h1 id=&quot;fusiones--en-git-merge-y-rebase&quot;&gt;Fusiones  en Git: Merge y Rebase&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Introducción&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando un usuario utiliza Git, tarde o temprano, debera utilizar ramas, que son un conjunto de commit en una línea de tiempo.&lt;/p&gt;
+
+&lt;p&gt;El esquema clásico de desarrollo con ramas en un repositorio de &lt;em&gt;Git&lt;/em&gt;, es tener una rama principal, denominada &lt;em&gt;master&lt;/em&gt;, donde tendremos código de forma estable, y conjunto de ramas con diferentes nombre como &lt;em&gt;desarrollo&lt;/em&gt; o &lt;em&gt;hostfix&lt;/em&gt;, que se utilizaran para el desarrollo de código.&lt;/p&gt;
+
+&lt;p&gt;En algún momento debemos unir las ramas. ya sea entre varias ramas de &lt;em&gt;desarrollo&lt;/em&gt; o de una rama &lt;em&gt;desarrollo&lt;/em&gt; con la rama &lt;em&gt;master&lt;/em&gt;. Este proceso se denomina  fusión o &lt;em&gt;merge&lt;/em&gt;. Que consistira en mover un conjunto de &lt;em&gt;commit&lt;/em&gt; desde una rama a otra.&lt;/p&gt;
+
+&lt;p&gt;Existen varios formas de hacer de fusionar dos ramas, el resultado será el mismo. La diferencia sera en como lo hace.&lt;/p&gt;
+
+&lt;p&gt;Principalmente tendremos dos formas de realizar fusionar ramas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Merge&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Tenemos dos ramas, por ejemplo rama &lt;em&gt;master&lt;/em&gt; y &lt;em&gt;desarrollo&lt;/em&gt;, queremos fusionar la rama desarrollo sobre la rama &lt;em&gt;master&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../imgs/20170502-165541.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos situamos en la rama hacia donde se dirige la fusión, en este caso la rama_master_, y realizamos el &lt;em&gt;merge&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	git checkout master
+	git merge desarrollo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Esta fusión realiza una “mezcla” , genera un nuevo &lt;em&gt;commit&lt;/em&gt; con el contenido de la rama &lt;em&gt;desarrollo&lt;/em&gt; en la rama &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/home/pepe/Descargas/Blog/AprendiendoGit/imgs/merge2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora podemos borrar las rama &lt;em&gt;desarrollo&lt;/em&gt; o seguir utilizandola para seguir desarrollando código.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rebase&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Es el otro tipo de fusión con un funcionamiento diferente, aunque tiene el mismo resultado. Este tipo de fusión lo que realiza es reorganización de los commits.&lt;/p&gt;
+
+&lt;p&gt;Por ejemploi, tenemos las dos ramas del ejemplo anterior, &lt;em&gt;master&lt;/em&gt; y &lt;em&gt;desarrollo&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;imgs/20170503-012232.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Realizamos el  mismo proceso anterior, fusionar  la rama &lt;em&gt;desarrollo&lt;/em&gt; en la rama &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cuando ejecutamos un &lt;em&gt;rebase&lt;/em&gt;, nos debemos situar en la rama que vamos a fusionar, al contrario que ocurria con el &lt;em&gt;merge&lt;/em&gt;. Y ejecutamos.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout desarrollo
+git rebase master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Este comando mueve todos los commit de la rama &lt;em&gt;desarrollo&lt;/em&gt; a continuación de la rama &lt;em&gt;master&lt;/em&gt;, el resultado sería.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;imgs/20170503-012728.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El resultado es  un historial de commit mas limpio.&lt;/p&gt;
+
+&lt;p&gt;En el proceso de reorganización, a los commits se le ha asignado un nuevo identificador (hash). En algunos escenario, repositorios públicos, no es aconsejable utilizar &lt;em&gt;rebase&lt;/em&gt;,&lt;/p&gt;
+
+&lt;p&gt;Cuando realizas un &lt;em&gt;push&lt;/em&gt; descargas commits a tu repositorio local, si realizas un &lt;em&gt;rebase&lt;/em&gt;, modificas los id de los commit, si realizas un &lt;em&gt;pull&lt;/em&gt; estos commits, con sus identificadores cambiados, se subiran al repositorio público. Si  otro desarrollador realiza un &lt;em&gt;pull&lt;/em&gt;, obtendra un conjunto de commit con los id cambiado, que se integraran en su repositorio local y provocara muchos dolores de cabeza.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rebase interactivo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Es una opción de &lt;em&gt;Rebase&lt;/em&gt; y permite realizar la reorganización de una forma manual. Continuando con el ejemplo anterior, si ejecutamos.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase -i desarrollo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Se nos abrira el editor que tenga configurado Git, por defecto vi, mostrando todos los commit de la rama desarrollo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;imgs/20170503-161445.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En la parte superior veremos los &lt;em&gt;commit&lt;/em&gt; con sus identificadores, y una opción que indica la acción que vamos a realizar sobre ese &lt;em&gt;commit&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Entre las acciones que podemos realizar tenemos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;pick&lt;/strong&gt;: Sin modificación , no realizamos acción sobre ese commit.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;squash&lt;/strong&gt;: Permite unir &lt;em&gt;commits&lt;/em&gt;, el seleccionado con el anterior. El &lt;em&gt;commit&lt;/em&gt; debera tener un nuevo mensaje.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;fixup&lt;/strong&gt;: Permite unir &lt;em&gt;commit&lt;/em&gt;, utilizando el mensaje del primero.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;edit&lt;/strong&gt;: Para editar el mensaje del &lt;em&gt;commit&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;drop&lt;/strong&gt;: Borra un commit, también eliminado la línea directamente.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;exec&lt;/strong&gt;: Permite ejecutar un comando usando shell.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;También podemos escoger un conjunto de commit, no toda la rama, para reorganizar. Como ejemplo.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rebase -i master~3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Selecciona los útimos 3 commits de la rama &lt;em&gt;master&lt;/em&gt; para reorganizar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusión&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Normalmente se usa &lt;em&gt;merge&lt;/em&gt; para fusionar dos ramas, pero el comando &lt;em&gt;rebase&lt;/em&gt; debido a su limitación de no usarse en repositorios públicos, no es tan común, aunque tiene su utilidad para dejar un historial mas limpio.&lt;/p&gt;
+
+&lt;p&gt;El comando &lt;em&gt;rebase&lt;/em&gt; interactivo es muy útil para limpiar aquellos &lt;em&gt;commit&lt;/em&gt; que no aportan valor al historial, se pueden unir con otros, modificar su mensaje. Es un comando muy útil para que el historial de una rama sera mas comprensible.&lt;/p&gt;</content><author><name></name></author><summary type="html">Fusiones en Git: Merge y Rebase</summary></entry><entry><title type="html">02 Configurar entorno local para trabajar con Github</title><link href="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html" rel="alternate" type="text/html" title="02 Configurar entorno local para trabajar con Github" /><published>2017-05-01T13:47:00+02:00</published><updated>2017-05-01T13:47:00+02:00</updated><id>http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github</id><content type="html" xml:base="http://localhost:4000/git//2017/05/01/configurar-entorno-para-trabajar-con-github.html">&lt;h1 id=&quot;01-generar-claves-ssh&quot;&gt;01 Generar claves SSH&lt;/h1&gt;
 
 &lt;p&gt;Comprueba si tienes alguna &lt;strong&gt;clave SSH&lt;/strong&gt; generada:&lt;/p&gt;
 
@@ -63,11 +160,35 @@
 
 &lt;p&gt;y como respuesta te debe salir algo similar a ésto:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/git//img/02-05-comando-realizado-correctamente.png&quot; alt=&quot;Respuesta comando de comprobacion&quot; title=&quot;Respuesta comando de comprobacion&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">01 Generar claves SSH</summary></entry><entry><title type="html">01 Concepto</title><link href="http://localhost:4000/git//2017/04/30/definicion.html" rel="alternate" type="text/html" title="01 Concepto" /><published>2017-04-30T16:34:25+02:00</published><updated>2017-04-30T16:34:25+02:00</updated><id>http://localhost:4000/git//2017/04/30/definicion</id><content type="html" xml:base="http://localhost:4000/git//2017/04/30/definicion.html">&lt;h1 id=&quot;00-definición&quot;&gt;00 Definición&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/git//img/02-05-comando-realizado-correctamente.png&quot; alt=&quot;Respuesta comando de comprobacion&quot; title=&quot;Respuesta comando de comprobacion&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; es un software de control de versiones diseñado por &lt;em&gt;Linus Torvalds&lt;/em&gt; , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.&lt;/p&gt;
+&lt;h1 id=&quot;04-configurar-nombre-y-correo&quot;&gt;04 Configurar nombre y correo&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global user.name &quot;John Doe&quot;
+
+$ git config --global user.email johndoe@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&quot;05-guardar-contraseña-en-local&quot;&gt;05 Guardar contraseña en local&lt;/h1&gt;
+
+&lt;p&gt;Para que no nos pida contraseña cada vez que enviamos cambios a GitHub:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper store
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La contraseña del repositorio remoto queda almacenada en el fichero &lt;code class=&quot;highlighter-rouge&quot;&gt;.git-credentials&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si no queremos que quede guardada:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git config --global credential.helper 'cache --timeout=3600'
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Cuando transcurra una hora nos volverá a pedir la contraseña.&lt;/p&gt;</content><author><name></name></author><summary type="html">01 Generar claves SSH</summary></entry><entry><title type="html">01 Concepto</title><link href="http://localhost:4000/git//2017/04/30/definicion.html" rel="alternate" type="text/html" title="01 Concepto" /><published>2017-04-30T16:34:25+02:00</published><updated>2017-04-30T16:34:25+02:00</updated><id>http://localhost:4000/git//2017/04/30/definicion</id><content type="html" xml:base="http://localhost:4000/git//2017/04/30/definicion.html">&lt;h1 id=&quot;00-definición&quot;&gt;00 Definición&lt;/h1&gt;
 
 &lt;p&gt;Se llama &lt;strong&gt;control de versiones&lt;/strong&gt; a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. Una versión, revisión o edición de un producto, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo o modificación.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; es un software de control de versiones diseñado por &lt;em&gt;Linus Torvalds&lt;/em&gt; , pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.&lt;/p&gt;
 
 &lt;h1 id=&quot;01-características&quot;&gt;01 Características&lt;/h1&gt;
 

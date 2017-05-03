@@ -143,6 +143,30 @@
 
 <p><img src="/git//img/02-05-comando-realizado-correctamente.png" alt="Respuesta comando de comprobacion" title="Respuesta comando de comprobacion" /></p>
 
+<h1 id="04-configurar-nombre-y-correo">04 Configurar nombre y correo</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git config --global user.name "John Doe"
+
+$ git config --global user.email johndoe@example.com
+</code></pre>
+</div>
+<h1 id="05-guardar-contraseña-en-local">05 Guardar contraseña en local</h1>
+
+<p>Para que no nos pida contraseña cada vez que enviamos cambios a GitHub:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git config --global credential.helper store
+</code></pre>
+</div>
+
+<p>La contraseña del repositorio remoto queda almacenada en el fichero <code class="highlighter-rouge">.git-credentials</code></p>
+
+<p>Si no queremos que quede guardada:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git config --global credential.helper 'cache --timeout=3600'
+</code></pre>
+</div>
+<p>Cuando transcurra una hora nos volverá a pedir la contraseña.</p>
+
   </div>
 
   
